@@ -1,0 +1,788 @@
+/* Temel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden;
+    /* Yükleme sırasında kaydırmayı engelle */
+}
+
+/* --- YÜKLEME EKRANI (PRELOADER) --- */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* YAZILIM kelimesi için parlak turuncu efekti */
+.highlight-yazilim {
+    color: #ff6600;
+    text-shadow: 0 0 15px rgba(255, 102, 0, 0.8), 0 0 30px rgba(255, 102, 0, 0.4);
+    font-weight: 800;
+}
+
+.progress-bar {
+    width: 250px;
+    height: 3px;
+    background: #1a1a1a;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: #ff6600;
+    box-shadow: 0 0 10px #ff6600;
+    animation: loading 2.5s forwards;
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* --- ANA İÇERİK --- */
+#main-content {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+#main-content.visible {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Hero Bölümü (Arka Plan Görseli Burada) */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+    /* Yazılımla alakalı görsel ve karartma katmanı */
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax efekti verir */
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.highlight-turuncu {
+    color: #ff6600;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 35px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding: 16px 45px;
+    background: #ff6600;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.4s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #ffffff;
+    color: #ff6600;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 102, 0, 0.3);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #080808;
+    color: #ffffff;
+    padding: 70px 8% 30px;
+    border-top: 2px solid #1a1a1a;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    color: #ff6600;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Sosyal Medya */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: #ff6600;
+    transform: rotate(360deg);
+}
+
+/* Hızlı Menü */
+.footer-menu ul {
+    list-style: none;
+}
+
+.footer-menu ul li {
+    margin-bottom: 12px;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: #bbbbbb;
+    transition: 0.3s;
+}
+
+.footer-menu ul li a:hover {
+    color: #ff6600;
+    padding-left: 10px;
+}
+
+/* İletişim Bilgileri */
+.footer-contact p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: #bbbbbb;
+}
+
+.footer-contact i {
+    color: #ff6600;
+    margin-right: 15px;
+    font-size: 1.1rem;
+}
+
+/* Alt Telif Hakkı */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1a1a1a;
+    padding-top: 25px;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+/* --- RESPONSIVE TASARIM (MOBİL UYUMLULUK) --- */
+
+/* Tablet ve Küçük Bilgisayarlar (1024px ve altı) */
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    nav {
+        padding: 20px 5%;
+    }
+}
+
+/* Cep Telefonları ve Tabletler (768px ve altı) */
+@media (max-width: 768px) {
+
+    /* Navbar Düzenlemesi */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    /* Hero Bölümü Düzenlemesi */
+    .hero {
+        height: 70vh;
+        background-attachment: scroll;
+        /* Mobilde performans için sabit arka planı kapatıyoruz */
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    /* Footer Düzenlemesi */
+    .footer-container {
+        grid-template-columns: 1fr;
+        /* Her bölümü tek sütun yap */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-contact p {
+        justify-content: center;
+    }
+
+    /* Yükleme Ekranı Logosu */
+    .loader-logo {
+        font-size: 1.8rem;
+    }
+}
+
+/* Küçük Telefonlar (480px ve altı) */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        /* Buton telefonlarda tam genişlik olur */
+        padding: 14px;
+    }
+
+    nav ul {
+        font-size: 0.8rem;
+    }
+}
+
+/* --- HİZMETLER BÖLÜMÜ --- */
+.services {
+    padding: 100px 10%;
+    background-color: #0c0c0c;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #151515;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid #222;
+    cursor: pointer;
+}
+
+/* Kartın üzerine gelindiğinde (Hover) */
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff6600;
+    box-shadow: 0 10px 30px rgba(255, 102, 0, 0.2);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.service-card:hover i {
+    text-shadow: 0 0 15px #ff6600;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.service-card p {
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsive Düzenleme (Önceki media query içine de eklenebilir) */
+@media (max-width: 768px) {
+    .services {
+        padding: 60px 5%;
+    }
+}
+
+/* Genel Footer Stilleri */
+footer {
+    background-color: #121212; /* Çok koyu siyah */
+    color: #e0e0e0; /* Açık gri metin */
+    padding: 60px 0 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Değişkenler - Renk Paleti */
+:root {
+    --primary-orange: #ff6600; /* Canlı turuncu */
+    --hover-orange: #e65c00; /* Daha koyu turuncu */
+    --text-light: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --bg-darker: #121212;
+    --bg-input: #2a2a2a;
+    --bg-social-icon: #333;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* Başlıklar */
+.footer-title {
+    color: var(--primary-orange);
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer-section p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Linkler */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-orange);
+}
+
+/* Bülten Formu */
+.newsletter h4 {
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-form input {
+    padding: 12px;
+    border: none;
+    background: var(--bg-input);
+    color: white;
+    border-radius: 4px 0 0 4px;
+    width: 100%;
+}
+
+.newsletter-form button {
+    padding: 12px 20px;
+    background: var(--primary-orange);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: var(--hover-orange);
+}
+
+/* İletişim Bilgileri */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-icon {
+    color: var(--primary-orange);
+    font-size: 1.2rem;
+    margin-right: 15px;
+    width: 25px; /* İkonların dikey hizalanması için sabit genişlik */
+    text-align: center;
+}
+
+.contact-item p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+/* Sosyal Medya İkonları - Tam Ortalanmış */
+.social-icons {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon-wrapper {
+    display: flex;
+    justify-content: center; /* Yatay ortalama */
+    align-items: center; /* Dikey ortalama */
+    width: 40px;
+    height: 40px;
+    background: var(--bg-social-icon);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.social-icon-wrapper i {
+    font-size: 1.2rem;
+}
+
+.social-icon-wrapper:hover {
+    background: var(--primary-orange);
+    transform: translateY(-3px);
+}
+
+/* Ödeme İkonları */
+.footer-payment-methods {
+    border-top: 1px solid #333;
+    margin-top: 50px;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.payment-icons {
+    font-size: 2rem;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.payment-icons i:hover {
+    color: var(--primary-orange);
+    transition: color 0.3s;
+}
+
+.security-badge {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-left: 15px;
+}
+
+.security-badge i {
+    color: var(--primary-orange);
+    margin-right: 5px;
+}
+
+/* Alt Telif Bölümü */
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .newsletter-form, .social-icons, .contact-item {
+        justify-content: center;
+    }
+    
+    .payment-icons {
+        flex-wrap: wrap;
+    }
+}
+
+/* Sosyal Medya Alanı - Garantili Hizalama */
+.social-icons {
+    display: flex !important;
+    gap: 15px !important;
+    justify-content: flex-start; /* Footer içinde sola yaslı durması için */
+    align-items: center !important;
+    margin-top: 25px;
+}
+
+.social-icon-wrapper {
+    /* Esnek kutu ile ortalama */
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    
+    /* Boyutlar */
+    width: 45px !important;
+    height: 45px !important;
+    
+    /* Tasarım */
+    background-color: #1e1e1e !important; /* Görseldeki koyu gri tonu */
+    border-radius: 50% !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease-in-out !important;
+    
+    /* İç boşlukları sıfırla */
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.social-icon-wrapper i {
+    color: #ff6600 !important; /* Turuncu ikon */
+    font-size: 20px !important;
+    
+    /* FontAwesome'ın yarattığı gizli boşlukları öldürür */
+    line-height: 0 !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* HOVER EFEKTİ: Arka plan turuncu olur, ikon siyah olur */
+.social-icon-wrapper:hover {
+    background-color: #ff6600 !important;
+    transform: translateY(-5px) !important;
+}
+
+.social-icon-wrapper:hover i {
+    color: #121212 !important; /* Turuncu üzerinde siyah ikon net görünür */
+}
+
+/* Modal Arka Planı (Karartma) */
+.modal-overlay {
+    display: none; /* Varsayılan olarak gizli */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+/* Modal Kutusu */
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 5% auto;
+    padding: 0;
+    border: 1px solid #ff6600;
+    width: 50%; /* Mobilde %90 yapılması önerilir */
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(255, 102, 0, 0.2);
+    animation: modalFadeIn 0.3s;
+}
+
+/* Modal Başlık */
+.modal-header {
+    padding: 15px 25px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    color: #ff6600;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Kapatma Butonu */
+.close-btn {
+    color: #888;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ff6600;
+}
+
+/* Modal Metin Alanı */
+.modal-body {
+    padding: 25px;
+    max-height: 60vh;
+    overflow-y: auto;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.modal-body h3 {
+    color: #ff6600;
+    margin-top: 20px;
+}
+
+/* Alt Buton */
+.modal-footer {
+    padding: 15px 25px;
+    border-top: 1px solid #333;
+    text-align: right;
+}
+
+.modal-ok-btn {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal-ok-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Açılış Animasyonu */
+@keyframes modalFadeIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

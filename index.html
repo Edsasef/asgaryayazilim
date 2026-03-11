@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AŞGARYA YAZILIM | Dijital Ajans</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <h1 class="loader-logo">AŞGARYA <span class="highlight-yazilim">YAZILIM</span></h1>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content" class="hidden">
+        <nav>
+            <div class="logo">AŞGARYA <span class="highlight-yazilim">YAZILIM</span></div>
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Hizmetler</a></li>
+                <li><a href="#">Projeler</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Geleceği <span class="highlight-turuncu">Dijitalle</span> Kodluyoruz</h1>
+                <p>AŞGARYA <span class="highlight-yazilim-hero">YAZILIM</span> ile dijital dünyada fark yaratın. Özel
+                    web ve mobil çözümlerimizle tanışın.</p>
+                <a href="#" class="btn">Bizimle Tanışın</a>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="section-title">
+                <h2>Neler <span class="highlight-turuncu">Yapıyoruz?</span></h2>
+                <p>AŞGARYA YAZILIM olarak dijital dünyadaki tüm ihtiyaçlarınıza profesyonel çözümler sunuyoruz.</p>
+            </div>
+
+            <div class="services-container">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Geliştirme</h3>
+                    <p>Modern, hızlı ve SEO uyumlu web siteleri tasarlıyoruz.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobil Uygulama</h3>
+                    <p>iOS ve Android platformları için kullanıcı dostu mobil çözümler.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Veritabanı Yönetimi</h3>
+                    <p>PostgreSQL ve modern veritabanı mimarileri ile verilerinizi güvenceye alıyoruz.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Tasarım</h3>
+                    <p>Kullanıcı deneyimini ön planda tutan şık ve modern arayüzler.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section footer-about">
+                    <h3 class="footer-title">AŞGARYA YAZILIM</h3>
+                    <p>Yenilikçi yazılım çözümleri ve dijital dönüşüm projelerinizde profesyonel ortağınız.</p>
+                    <div class="newsletter">
+                        <h4>Bültene Abone Ol</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="E-posta adresiniz" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-section footer-menu">
+                    <h3 class="footer-title">Hızlı Menü</h3>
+                    <ul>
+                        <li><a href="#">Anasayfa</a></li>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">Hizmetlerimiz</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section footer-legal">
+                    <h3 class="footer-title">Kurumsal</h3>
+                    <ul>
+                        <li><a href="javascript:void(0)" onclick="openKvkk()">KVKK Aydınlatma Metni</a></li>
+
+                        <div id="kvkkModal" class="modal-overlay">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>KVKK Aydınlatma Metni</h2>
+                                    <span class="close-btn" onclick="closeKvkk()">&times;</span>
+                                </div>
+                                <div class="modal-body">
+                                    <p><strong>AŞGARYA YAZILIM</strong> olarak, kişisel verilerinizin güvenliğine büyük
+                                        önem veriyoruz. 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca
+                                        veri sorumlusu sıfatıyla sizleri bilgilendirmek isteriz.</p>
+
+                                    <h3>1. Kişisel Verilerin İşlenme Amacı</h3>
+                                    <p>Toplanan kişisel verileriniz, hizmetlerimizin sunulması, taleplerinizin
+                                        karşılanması ve yasal yükümlülüklerimizin yerine getirilmesi amacıyla
+                                        işlenmektedir.</p>
+
+                                    <h3>2. Veri Aktarımı</h3>
+                                    <p>Verileriniz, yalnızca yasal zorunluluklar çerçevesinde yetkili kamu kurumları ve
+                                        hizmet ortaklarımızla paylaşılabilir.</p>
+
+                                    <h3>3. Haklarınız</h3>
+                                    <p>KVKK'nın 11. maddesi kapsamında; verilerinizin işlenip işlenmediğini öğrenme,
+                                        düzeltilmesini isteme ve silinmesini talep etme haklarına sahipsiniz.</p>
+
+                                    <p>Detaylı bilgi için <strong>info@asgaryayazilim.com</strong> adresi üzerinden
+                                        bizimle iletişime geçebilirsiniz.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="modal-ok-btn" onclick="closeKvkk()">Anladım</button>
+                                </div>
+                            </div>
+                        </div>
+                        <li><a href="javascript:void(0)" onclick="openUsage()">Kullanım Koşulları</a></li>
+
+                        <div id="usageModal" class="modal-overlay">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Kullanım Koşulları</h2>
+                                    <span class="close-btn" onclick="closeUsage()">&times;</span>
+                                </div>
+                                <div class="modal-body">
+                                    <p><strong>AŞGARYA YAZILIM</strong> web sitesine hoş geldiniz. Bu web sitesini
+                                        kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız:</p>
+
+                                    <h3>1. Hizmet Kullanımı</h3>
+                                    <p>Sitede yer alan tüm içerikler bilgilendirme amaçlıdır. İçeriklerin izinsiz
+                                        kopyalanması ve ticari amaçla kullanılması yasaktır.</p>
+
+                                    <h3>2. Fikri Mülkiyet</h3>
+                                    <p>Aşgarya Yazılım markası, logosu ve tüm yazılım kodları fikri mülkiyet hakları
+                                        kapsamında korunmaktadır. Yazılı izin alınmadan kullanılamaz.</p>
+
+                                    <h3>3. Sorumluluk Reddi</h3>
+                                    <p>Web sitemiz üzerinden verilen dış bağlantıların içeriğinden Aşgarya Yazılım
+                                        sorumlu tutulamaz. Teknik aksaklıklardan kaynaklı veri kayıplarında sorumluluk
+                                        kullanıcıya aittir.</p>
+
+                                    <h3>4. Değişiklik Hakları</h3>
+                                    <p>Aşgarya Yazılım, bu kullanım koşullarını dilediği zaman güncelleme hakkını saklı
+                                        tutar.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="modal-ok-btn" onclick="closeUsage()">Kabul Ediyorum</button>
+                                </div>
+                            </div>
+                        </div>
+                        <li><a href="javascript:void(0)" onclick="openCookie()">Çerez Politikası</a></li>
+
+                        <div id="cookieModal" class="modal-overlay">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Çerez Politikası</h2>
+                                    <span class="close-btn" onclick="closeCookie()">&times;</span>
+                                </div>
+                                <div class="modal-body">
+                                    <p><strong>AŞGARYA YAZILIM</strong> olarak, web sitemizi ziyaretlerinizde kullanıcı
+                                        deneyiminizi geliştirmek ve size daha iyi hizmet sunabilmek için çerezler
+                                        (cookies) kullanıyoruz.</p>
+
+                                    <h3>1. Çerez Nedir?</h3>
+                                    <p>Çerezler, web sitemizi ziyaret ettiğinizde tarayıcınız aracılığıyla cihazınıza
+                                        kaydedilen küçük metin dosyalarıdır.</p>
+
+                                    <h3>2. Hangi Çerezleri Kullanıyoruz?</h3>
+                                    <ul>
+                                        <li><strong>Zorunlu Çerezler:</strong> Sitenin düzgün çalışması için gereklidir.
+                                        </li>
+                                        <li><strong>Performans Çerezleri:</strong> Ziyaretçi trafiğini analiz ederek
+                                            sitemizi iyileştirmemize yardımcı olur.</li>
+                                        <li><strong>Fonksiyonel Çerezler:</strong> Dil tercihlerinizi ve seçimlerinizi
+                                            hatırlar.</li>
+                                    </ul>
+
+                                    <h3>3. Çerezleri Nasıl Kontrol Edebilirsiniz?</h3>
+                                    <p>Tarayıcınızın ayarlar kısmından çerezleri dilediğiniz zaman engelleyebilir veya
+                                        silebilirsiniz. Ancak çerezlerin devre dışı bırakılması, sitemizdeki bazı
+                                        özelliklerin tam performanslı çalışmasını engelleyebilir.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="modal-ok-btn" onclick="closeCookie()">Anladım</button>
+                                </div>
+                            </div>
+                        </div>
+                        <li><a href="javascript:void(0)" onclick="openSales()">Mesafeli Satış Sözleşmesi</a></li>
+                        <li><a href="javascript:void(0)" onclick="openRefund()">İptal ve İade Koşulları</a></li>
+
+                        <div id="salesModal" class="modal-overlay">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Mesafeli Satış Sözleşmesi</h2>
+                                    <span class="close-btn" onclick="closeSales()">&times;</span>
+                                </div>
+                                <div class="modal-body">
+                                    <h3>1. Taraflar</h3>
+                                    <p>İşbu sözleşme, Aşgarya Yazılım (Satıcı) ile hizmetten faydalanan kullanıcı
+                                        (Alıcı) arasında, dijital hizmetlerin satışı amacıyla düzenlenmiştir.</p>
+
+                                    <h3>2. Konu</h3>
+                                    <p>Alıcı'nın Satıcı'ya ait web sitesi üzerinden elektronik ortamda siparişini
+                                        verdiği yazılım hizmetleri veya dijital ürünlerin satışı ve teslimi ile ilgili
+                                        hak ve yükümlülükleri kapsar.</p>
+
+                                    <h3>3. Genel Hükümler</h3>
+                                    <p>Alıcı, sözleşme konusu ürünün temel nitelikleri, satış fiyatı ve ödeme şekli ile
+                                        ilgili tüm ön bilgileri okuyup bilgi sahibi olduğunu ve elektronik ortamda
+                                        gerekli teyidi verdiğini kabul eder.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="modal-ok-btn" onclick="closeSales()">Kabul Ediyorum</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="refundModal" class="modal-overlay">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>İptal ve İade Koşulları</h2>
+                                    <span class="close-btn" onclick="closeRefund()">&times;</span>
+                                </div>
+                                <div class="modal-body">
+                                    <h3>1. Cayma Hakkı</h3>
+                                    <p>Dijital içerikler, yazılımlar ve anında ifa edilen hizmetler (lisans anahtarları,
+                                        özel kodlama hizmetleri vb.), niteliği itibarıyla iadesi mümkün olmayan ürünler
+                                        kapsamında olduğu için cayma hakkı kullanılamaz.</p>
+
+                                    <h3>2. İptal Şartları</h3>
+                                    <p>Hizmet henüz başlamamışsa veya teknik bir kusur nedeniyle hizmet verilemiyorsa,
+                                        Alıcı iptal talebinde bulunabilir. Onaylanan iptal taleplerinde ücret iadesi 7
+                                        iş günü içinde yapılır.</p>
+
+                                    <h3>3. Ayıplı Hizmet</h3>
+                                    <p>Satın alınan hizmetin vadedilen teknik özellikleri taşımaması durumunda, gerekli
+                                        düzeltmeler Satıcı tarafından ücretsiz olarak yapılır veya ücret iadesi
+                                        gerçekleştirilir.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="modal-ok-btn" onclick="closeRefund()">Anladım</button>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="footer-section footer-contact">
+                    <h3 class="footer-title">İletişim</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <p>Örnek Mahallesi, Yazılım Sokak, No: 1</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <p>+90 555 123 4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <p>info@asgaryayazilim.com</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon-wrapper"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon-wrapper"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/yazilimasgarya/" class="social-icon-wrapper"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-wrapper"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-payment-methods">
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-stripe"></i>
+                    <span class="security-badge"><i class="fas fa-shield-alt"></i> 256-Bit SSL Güvenli Ödeme</span>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 AŞGARYA YAZILIM. Tüm Hakları Saklıdır.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
